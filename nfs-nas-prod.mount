@@ -1,0 +1,23 @@
+[Unit]
+Description=Devices
+After=network.target
+
+[mount]
+what=gsatnas01.globoi.com:/nas/backup
+where=/nas/backup
+type=nfs
+options=defaults,ro,bg,nfsvers=3,_netdev
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+# PONTOS DE MONTAGEM PARA OS COMPARTILHAMENTOS DO NAS #
+#gsatnas01.globoi.com:/NAS/app_fe		/nas/app_fe     nfs     defaults,bg,nfsvers=3,_netdev	0 0     
+#gsatnas01.globoi.com:/NAS/app_be        	/nas/app_be     nfs     defaults,bg,nfsvers=3,_netdev   0 0
+#gsatnas01.globoi.com:/NAS/config        	/nas/config     nfs     defaults,bg,nfsvers=3,_netdev   0 0
+#gsatnas01.globoi.com:/NAS/backup        	/nas/backup     nfs     defaults,bg,nfsvers=3,_netdev   0 0
+#gsatnas01.globoi.com:/NAS/bd            	/nas/bd         nfs     defaults,bg,nfsvers=3,_netdev   0 0
+#gsatnas01.globoi.com:/NAS/logs          	/nas/logs       nfs     defaults,bg,nfsvers=3,_netdev   0 0
+#gsatnas01.globoi.com:/NAS/arquivos      	/nas/arquivos   nfs     defaults,bg,nfsvers=3,_netdev   0 0

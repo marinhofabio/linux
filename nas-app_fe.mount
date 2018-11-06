@@ -1,0 +1,12 @@
+[Unit]
+Description=Devices
+After=network.target
+
+[Mount]
+What=gsatnas01.globoi.com:/NAS/app_fe
+Where=/nas/app_fe
+Type=nfs
+Options=defaults,ro,bg,nfsvers=3,_netdev
+
+[Install]
+WantedBy=multi-user.target

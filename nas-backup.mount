@@ -1,0 +1,13 @@
+[Unit]
+Description=Devices
+After=network.target
+
+[Mount]
+What=gsatnas01.globoi.com:/NAS/backup
+Where=/nas/backup
+
+Type=nfs
+Options=defaults,ro,bg,nfsvers=3,_netdev
+
+[Install]
+WantedBy=multi-user.target
