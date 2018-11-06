@@ -3,8 +3,8 @@ Description=Devices
 After=network.target
 
 [Mount]
-What=gsatnas01.globoi.com:/NAS/logs
-Where=/nas/logs
+What=nas01.example.com:/NAS/logs
+Where=/NAS/logs
 Type=nfs
 Options=defaults,ro,bg,nfsvers=3,_netdev
 

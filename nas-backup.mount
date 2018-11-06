@@ -3,8 +3,8 @@ Description=Devices
 After=network.target
 
 [Mount]
-What=gsatnas01.globoi.com:/NAS/backup
-Where=/nas/backup
+What=nas01.example.com:/NAS/backup
+Where=/NAS/backup
 
 Type=nfs
 Options=defaults,ro,bg,nfsvers=3,_netdev
