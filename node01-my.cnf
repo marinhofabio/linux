@@ -8,6 +8,13 @@
   user                             = mysql
   datadir                          = /var/lib/mysql
   tmpdir                           = /dev/shm
+  socket                           = /var/lib/mysql/mysql.sock
+  pid-file                         = /var/run/mysqld/mysqld.pid
+
+  ## GENERAL LOGGING ##
+  
+  ## SECURITY SETTINGS ##
+  symbolic-links                   = 0
     
   ### BINARY LOGGING ###
   log_bin
@@ -64,4 +71,7 @@
   innodb_support_xa                = 0
 
 [mysqld_safe]
-  pid-file                         = /run/mysqld/mysql.pid  
+  pid-file                         = /var/run/mysqld/mysqld.pid
+  socket                           = /var/lib/mysql/mysql.sock
+  nice                             = 0
+
