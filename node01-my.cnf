@@ -64,4 +64,4 @@
   innodb_support_xa                = 0
 
 [mysqld_safe]
-  pid-file                         = /run/mysqld/mysql.pid
+  pid-file                         = /run/mysqld/mysql.pid  
