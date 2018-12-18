@@ -2,6 +2,7 @@
 
   ## GENERAL SETTINGS ##
   skip_name_resolve
+  default_storage_engine           = InnoDB
   bind-address                     = 192.168.10.11
   server-id                        = 11
   user                             = mysql
@@ -12,7 +13,7 @@
   log_bin
   log-bin                          = pxcnode01-bin
   binlog_format                    = ROW
-  expire_logs_days                 = 10
+  expire_logs_days                 = 14
     
   ### THREAD SETTINGS ###
   thread_pool_size                 = 48
@@ -22,7 +23,13 @@
   ### LIMITS ###
   max-allowed-packet               = 16M
   max-connect-errors               = 10240
-  max-connections                  = 40000 
+  max-connections                  = 40000
+  
+  ### PERFORMANCE SETTINGS ###
+  sort_buffer_size                 = 256M
+  read_buffer_size                 = 256M
+  read_rnd_buffer_size	           = 256M
+  join_buffer_size	               = 128M
 
   ### QUERY CACHE SETTINGS ###
   query_cache_type                 = 0
@@ -43,7 +50,6 @@
   wsrep_retry_autocommit           = 1
 
   ### INNODB SETTINGS ###
-  default_storage_engine           = InnoDB
   innodb_locks_unsafe_for_binlog   = 1
   innodb_autoinc_lock_mode         = 2
   innodb_buffer_pool_size          = 32G
