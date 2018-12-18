@@ -7,7 +7,7 @@
   server-id                        = 14
   user                             = mysql
   datadir                          = /var/lib/mysql
-  tmpdir                           = /tmp/mysql-tmp
+  tmpdir                           = /dev/shm
     
   ### BINARY LOGGING ###
   log_bin
