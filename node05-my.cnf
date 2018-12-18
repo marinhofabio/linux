@@ -62,6 +62,6 @@
   innodb_locks_unsafe_for_binlog   = 1
   innodb_doublewrite               = 0
   innodb_support_xa                = 0
-
+  
 [mysqld_safe]
   pid-file                         = /run/mysqld/mysql.pid
