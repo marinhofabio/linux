@@ -1,0 +1,3 @@
+UUID=a3316fa1-c7f7-4980-b94c-bd9337087cfd  /          ext4  errors=remount-ro  0 1
+UUID=CA57-7B6E                             /boot/efi  vfat  umask=0077         0 1
+UUID=b2f46626-df5b-4f0b-9189-a23f09fe0f2e  none       swap  sw                 0 0
